@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Student Registration</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <fieldset>
+    <legend><b>Student Registration Form</b></legend>
+
+    <form oninput="x.value=(parseInt(m1.value||0)+parseInt(m2.value||0)+parseInt(m3.value||0))/3">
+
+      <label>Name:</label><br>
+      <input type="text" id="name" required><br><br>
+
+      <label>Age:</label><br>
+      <input type="number" id="age"><br><br>
+
+      <label>Gender:</label><br>
+      <input type="radio" name="gender"> Male
+      <input type="radio" name="gender"> Female<br><br>
+
+      <label>Email:</label><br>
+      <input type="email" id="email"><br><br>
+
+      <label>Phone Number:</label><br>
+      <input type="tel" id="phone"><br><br>
+
+      <label>Address:</label><br>
+      <textarea rows="3" cols="30"></textarea><br><br>
+
+      <label>Select Subjects & Enter Marks:</label><br><br>
+
+      <select id="subject1">
+        <option>Maths</option>
+        <option>English</option>
+        <option>Science</option>
+      </select>
+      <input type="number" id="m1"><br><br>
+
+      <select id="subject2">
+        <option>Maths</option>
+        <option>English</option>
+        <option>Science</option>
+      </select>
+      <input type="number" id="m2"><br><br>
+
+      <select id="subject3">
+        <option>Maths</option>
+        <option>English</option>
+        <option>Science</option>
+      </select>
+      <input type="number" id="m3"><br><br>
+
+      <label>Average:</label>
+      <output name="x" for="m1 m2 m3"></output><br><br>
+
+      <label>Choose Stream:</label><br>
+      <select>
+        <option>Science</option>
+        <option>Commerce</option>
+        <option>Arts</option>
+      </select><br><br>
+
+      <label>Hobbies:</label><br>
+      <input type="checkbox"> Sports
+      <input type="checkbox"> Music
+      <input type="checkbox"> Reading<br><br>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+
+    </form>
+  </fieldset>
+
+</body>
+
+</html>
