@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object and Array</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: white;
+      padding: 25px;
+      width: 400px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      color: blue;
+      font-weight: bold;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Object Data Structure and Array</h2>
+
+    <button onclick="showObject()">Show Object</button>
+    <button onclick="showArray()">Show Array</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function showObject() {
+      let student = {
+        name: "Riya",
+        age: 15,
+        className: "10th",
+        city: "Dehradun"
+      };
+
+      document.getElementById("result").innerHTML =
+        "Name: " + student.name + "<br>" +
+        "Age: " + student.age + "<br>" +
+        "Class: " + student.className + "<br>" +
+        "City: " + student.city;
+    }
+
+    function showArray() {
+      let subjects = ["HTML", "CSS", "JavaScript", "Python"];
+
+      let output = "Subjects:<br>";
+
+      for (let i = 0; i < subjects.length; i++) {
+        output = output + subjects[i] + "<br>";
+      }
+
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+
+</body>
+</html>
