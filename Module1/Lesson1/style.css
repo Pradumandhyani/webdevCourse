@@ -1,0 +1,22 @@
+
+        h1{
+            background-color: yellow;
+            font-size: large;
+        }
+        #red{
+            background-color: aqua;
+            color: blue;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        #blue{
+            background-color: yellow;
+            color: purple;
+        }
+        .pink{
+            background-color: black;
+            color: aliceblue;
+        }
+        body{
+            background-color:brown;
+        }
