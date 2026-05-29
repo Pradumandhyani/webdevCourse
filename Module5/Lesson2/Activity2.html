@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Static Method in JavaScript Class</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .box {
+      background-color: white;
+      width: 350px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px gray;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkblue;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Static Method in JavaScript Class</h2>
+
+    <button onclick="showMessage()">Call Static Method</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    class Student {
+      static display() {
+        return "This is a static method of Student class";
+      }
+    }
+
+    function showMessage() {
+      document.getElementById("result").innerHTML = Student.display();
+    }
+  </script>
+
+</body>
+</html>
