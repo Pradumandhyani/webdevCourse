@@ -7,16 +7,24 @@
       text-align: center;
       font-family: monospace;
     }
+    @keyframes shadowPage {
+      0%{
+        text-shadow: 2px 2px 2px red;
+      }
+      100%{
+        text-shadow: 5px 5px 30px red;
+      }
+    }
     #text{
-      text-shadow: 2px 2px 1px #CC5500;
-      /* (right-offset)px (left-offset)px (fade)px color*/
+      animation: shadowPage 1.5s ease-in-out infinite;
     }
     #box{
       box-shadow: 9px 9px 5px #301934;
+      background-color: aqua;
       /* (right-offset)px (left-offset)px (fade)px color*/
     }
 	#indent{
-            text-indent: 50%; 
+            text-indent: -20%; 
             /* //16 px or -3em */
         }
   </style>
