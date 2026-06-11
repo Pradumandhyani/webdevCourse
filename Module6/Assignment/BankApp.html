@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e3c72;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #243b55, #141e30);
+      color: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .balance {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .account-number {
+      margin-top: 15px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #1e3c72;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .deposit {
+      background: #28a745;
+    }
+
+    .withdraw {
+      background: #dc3545;
+    }
+
+    .clear {
+      background: #6c757d;
+      grid-column: span 2;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: scale(1.03);
+    }
+
+    .message {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+      min-height: 22px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .transactions {
+      margin-top: 20px;
+    }
+
+    .transactions h3 {
+      color: #1e3c72;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      max-height: 180px;
+      overflow-y: auto;
+    }
+
+    li {
+      background: #f1f1f1;
+      margin-bottom: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .deposit-text {
+      color: green;
+      font-weight: bold;
+    }
+
+    .withdraw-text {
+      color: red;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      color: #666;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>My Bank App</h1>
+
+    <div class="card">
+      <h2>Available Balance</h2>
+      <div class="balance">₹<span id="balance">5000</span></div>
+      <div class="account-number">Account No: XXXX XXXX 1234</div>
+    </div>
+
+    <div class="input-group">
+      <label for="amount">Enter Amount</label>
+      <input type="number" id="amount" placeholder="Enter amount" />
+    </div>
+
+    <div class="buttons">
+      <button class="deposit" onclick="depositMoney()">Deposit</button>
+      <button class="withdraw" onclick="withdrawMoney()">Withdraw</button>
+      <button class="clear" onclick="clearTransactions()">Clear Transactions</button>
+    </div>
+
+    <div id="message" class="message"></div>
+
+    <div class="transactions">
+      <h3>Transaction History</h3>
+      <ul id="transactionList">
+        <li>
+          <span>Account Created</span>
+          <span class="deposit-text">₹5000</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      Simple Bank App using HTML, CSS and JavaScript
+    </div>
+  </div>
+
+  <script>
+    let balance = 5000;
+
+    function updateBalance() {
+      document.getElementById("balance").innerText = balance;
+    }
+
+    function showMessage(text, type) {
+      const message = document.getElementById("message");
+      message.innerText = text;
+      message.className = "message " + type;
+
+      setTimeout(() => {
+        message.innerText = "";
+        message.className = "message";
+      }, 2500);
+    }
+
+    function addTransaction(type, amount) {
+      const transactionList = document.getElementById("transactionList");
+
+      const li = document.createElement("li");
+
+      const date = new Date().toLocaleTimeString();
+
+      if (type === "Deposit") {
+        li.innerHTML = `
+          <span>${type} - ${date}</span>
+          <span class="deposit-text">+₹${amount}</span>
+        `;
+      } else {
+        li.innerHTML = `
+          <span>${type} - ${date}</span>
+          <span class="withdraw-text">-₹${amount}</span>
+        `;
+      }
+
+      transactionList.prepend(li);
+    }
+
+    function depositMoney() {
+      const amountInput = document.getElementById("amount");
+      const amount = Number(amountInput.value);
+
+      if (amount <= 0 || amountInput.value === "") {
+        showMessage("Please enter a valid amount", "error");
+        return;
+      }
+
+      balance += amount;
+      updateBalance();
+      addTransaction("Deposit", amount);
+      showMessage("Amount deposited successfully", "success");
+
+      amountInput.value = "";
+    }
+
+    function withdrawMoney() {
+      const amountInput = document.getElementById("amount");
+      const amount = Number(amountInput.value);
+
+      if (amount <= 0 || amountInput.value === "") {
+        showMessage("Please enter a valid amount", "error");
+        return;
+      }
+
+      if (amount > balance) {
+        showMessage("Insufficient balance", "error");
+        return;
+      }
+
+      balance -= amount;
+      updateBalance();
+      addTransaction("Withdraw", amount);
+      showMessage("Amount withdrawn successfully", "success");
+
+      amountInput.value = "";
+    }
+
+    function clearTransactions() {
+      document.getElementById("transactionList").innerHTML = "";
+      showMessage("Transaction history cleared", "success");
+    }
+  </script>
+
+</body>
+</html>
