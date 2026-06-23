@@ -1,3 +1,14 @@
+<!-- static
+This is the default position; the element stays in its normal place.
+relative
+The element moves from its original position using top, left, right, or bottom.
+absolute
+The element is placed according to its nearest positioned parent.
+fixed
+The element stays fixed on the screen even when we scroll.
+sticky
+The element scrolls normally first, then sticks at a fixed position when it reaches that point. -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,23 +53,7 @@
 </head>
 <body>
 
-  <h1>&#127829; Tasty Bites Menu</h1>
-
-  <h2>Static Positioning (default)</h2>
-  <p>Elements sit in normal flow — one after another, top to bottom.</p>
-  <div class="menu-item">&#127829; Pizza — $8.99</div>
-  <div class="menu-item">&#127828; Burger — $6.99</div>
-  <div class="menu-item">&#127839; Sandwich — $5.49</div>
-
-  <h2>Relative Positioning</h2>
-  <p>The element shifts from where it normally sits. Its original space stays reserved.</p>
-  <div class="compare-wrap">
-    <div class="compare-col">
-      <p>Without relative:</p>
-      <div class="menu-item">&#127829; Pizza — $8.99</div>
-      <div class="menu-item" style="background:#e85d04;color:white;">&#11088; Chef's Special!</div>
-      <div class="menu-item">&#127839; Sandwich — $5.49</div>
-    </div>
+  
     <div class="compare-col">
       <p>With position: relative; left: 40px:</p>
       <div class="menu-item">&#127829; Pizza — $8.99</div>
@@ -66,7 +61,7 @@
       <div class="special-badge">&#11088; Chef's Special!</div>
       <div class="menu-item">&#127839; Sandwich — $5.49</div>
     </div>
-  </div>
+
 
 </body>
 </html>
