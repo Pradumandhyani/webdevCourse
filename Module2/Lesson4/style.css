@@ -38,7 +38,7 @@ ul li:hover {
 }
 
 /* :nth-child(n) Pseudo-class */
-ul li:nth-child(3) {
+ul li:nth-child(2) {
     background-color: #21262D;
 }
 
@@ -53,7 +53,7 @@ ul li::after {
 }
 
 /* ::after Pseudo-element */
-a::after {
+a::before {
     content: "Praduman";
 }
 
