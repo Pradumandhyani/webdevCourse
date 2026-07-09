@@ -34,7 +34,7 @@ h1 + p {
 
 /* :hover Pseudo-class */
 ul li:hover {
-    color: #4F8CC9;
+    color: red;
 }
 
 /* :nth-child(n) Pseudo-class */
