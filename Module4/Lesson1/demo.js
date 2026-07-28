@@ -1,3 +1,3 @@
 var a;
 console.log(a);
-var a=9;
+var a=10;

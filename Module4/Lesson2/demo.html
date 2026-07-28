@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num">
+    <p id="result"></p>
+    <button onClick="calculate()">Calculate</button>
+    <script>
+        function calculate(){
+            var num=document.getElementById("num").value;
+            console.log(num);
+            var result;
+            if(num>90){
+                result="Excellent";
+            }else if(num>60){
+                result="Good";
+            }else if(num>40){
+                result="fair";
+            }else if(num>0){
+                result="poor";
+            }else{
+                result="invalid number";
+
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</body>
+</html>

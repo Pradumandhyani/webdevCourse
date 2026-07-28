@@ -6,17 +6,17 @@
 <p id="result"></p>
 <script>
     function findMax() {
-    var i;
+   
     var max = 0;
-    for(i = 0; i < arguments.length; i++) {
-    if (arguments[i] > max) {
-    max = arguments[i];
+    for(var i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {  // 7>0 -> 8>7
+    max = arguments[i]; // max=7 -> max=8
     }
     }
     return max;
     }
 
-    document.getElementById("result").innerHTML = findMax(4, 5, 6);
+    document.getElementById("result").innerHTML = findMax(7, 5, 6, 8);
 </script>
 
 </body>

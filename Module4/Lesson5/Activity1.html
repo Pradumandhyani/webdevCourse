@@ -7,12 +7,14 @@
 <p id="demo"></p>
 
 <script>
-var cars = [
-  "Coding",
-  "Magic",
-  "Learn"
-];
-document.getElementById("demo").innerHTML = cars[2];
+var cars = ["Porche 9:11", "Rolce royce", "lamborghini urus", "Lamborghini aventador","hummer"];
+
+var res="";
+for(var i=0;i<cars.length;i++){
+    res+=cars[i]+"<br>";
+}
+
+document.getElementById("demo").innerHTML = res;
 </script>
 
 </body>

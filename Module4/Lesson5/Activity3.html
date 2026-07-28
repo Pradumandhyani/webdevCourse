@@ -5,13 +5,17 @@
 <p>Do a calculation and then display the result.</p>
 <p id="demo"></p>
 <script>
-function add(a, b) {
-    return a + b;
+
+var result="";
+function tables(n){
+for(var i=1;i<=10;i++){
+    result+=(i*n)+"<br>"
 }
-function average(a, b) {
-    return add(a, b) / 2;
 }
-let result = average(10, 20);
+for(let i=1;i<=10;i++){
+    tables(i);
+}
+
 document.getElementById("demo").innerHTML = result;
 </script>
 </body>
