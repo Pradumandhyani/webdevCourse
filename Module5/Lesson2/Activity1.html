@@ -53,7 +53,7 @@
   </div>
   <script>
     class Planet {
-      constructor(name, fact) {
+      constructor(name, fact,) {
         this.name = name;
         this.fact = fact;
       }
@@ -66,18 +66,13 @@
       let p1 = new Planet("Earth", "The only planet with life");
       let p2 = new Planet("Mars", "Known as the Red Planet");
       let p3 = new Planet("Saturn", "Has rings made of ice");
+      
 
-      document.getElementById("card1").innerHTML =
-        "<div class='card'><div class='planet-name'>" + p1.name + "</div>" +
-        "<div class='planet-fact'>" + p1.describe() + "</div></div>";
+      document.getElementById("card1").innerHTML =p1.name + " description " + p1.describe() ;
 
-      document.getElementById("card2").innerHTML =
-        "<div class='card'><div class='planet-name'>" + p2.name + "</div>" +
-        "<div class='planet-fact'>" + p2.describe() + "</div></div>";
+      document.getElementById("card2").innerHTML =p2.name + " description " + p2.describe() ;
 
-      document.getElementById("card3").innerHTML =
-        "<div class='card'><div class='planet-name'>" + p3.name + "</div>" +
-        "<div class='planet-fact'>" + p3.describe() + "</div></div>";
+      document.getElementById("card3").innerHTML =p3.name + " description " + p3.describe() ;
     }
   </script>
 </body>

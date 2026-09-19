@@ -6,17 +6,17 @@
 <p id="demo"></p>
 <script>
 
-var result="";
-function tables(n){
-for(var i=1;i<=10;i++){
-    result+=(i*n)+"<br>"
-}
-}
+
+function table(n){
 for(let i=1;i<=10;i++){
-    tables(i);
+    document.write(i*n);
+    document.write("<br>");
+}
 }
 
-document.getElementById("demo").innerHTML = result;
+for(let i=1;i<=10;i++){
+    table(i);
+}
 </script>
 </body>
 </html>

@@ -1,9 +1,7 @@
+p{
+    color: blue;
+}
 h1{
-    color: aquamarine;
-}
-.demo{
-    background-color: blueviolet;
-}
-#hello{
-    background-color: yellow;
+    background-color: aquamarine;
+    color: blue;
 }

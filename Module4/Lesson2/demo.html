@@ -6,28 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" id="num">
+    <button onclick="example(8,7)"> login</button>
     <p id="result"></p>
-    <button onClick="calculate()">Calculate</button>
     <script>
-        function calculate(){
-            var num=document.getElementById("num").value;
-            console.log(num);
-            var result;
-            if(num>90){
-                result="Excellent";
-            }else if(num>60){
-                result="Good";
-            }else if(num>40){
-                result="fair";
-            }else if(num>0){
-                result="poor";
-            }else{
-                result="invalid number";
-
-            }
-            document.getElementById("result").innerHTML=result;
+        function example(a,b){
+            document.getElementById("result").innerHTML="login successfull "+(a*b);
         }
+
     </script>
 </body>
 </html>

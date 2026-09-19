@@ -44,24 +44,29 @@
 
 <body>
 
-  <div class="box">
-    <h2>Static Method in JavaScript Class</h2>
-
-    <button onclick="showMessage()">Call Static Method</button>
-
-    <p id="result"></p>
-  </div>
 
   <script>
-    class Student {
-      static display() {
-        return "This is a static method of Student class";
+    class School{
+      schoolName(){
+        document.write("My School name is codingal")
       }
-    }
+      course(){
+        document.write("course is web development and ai");
+      }
+      studentName(name){
+        document.write("hi my name is "+name);
+      }
 
-    function showMessage() {
-      document.getElementById("result").innerHTML = Student.display();
+
     }
+    let siya=new School();
+    siya.schoolName();
+    siya.studentName("siya");
+
+    let sahajta=new School();
+    sahajta.course();
+
+
   </script>
 
 </body>

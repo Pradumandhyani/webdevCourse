@@ -44,6 +44,9 @@
   <script>
 
     // JSON — the order stored as a JavaScript object
+
+    //JSON => Javascript object notation
+    
     let order = {
       item:  "Pizza",
       price: 5,
@@ -52,8 +55,8 @@
 
     // JSON.stringify() and JSON.parse()
     function saveOrder() {
-      let jsonText    = JSON.stringify(order);
-      let loadedOrder = JSON.parse(jsonText);
+      let jsonText    = JSON.stringify(order);  //string
+      let loadedOrder = JSON.parse(jsonText);  //object
 
       document.getElementById("json-text").innerHTML    = jsonText;
       document.getElementById("loaded-item").innerHTML  = loadedOrder.item;
@@ -61,9 +64,9 @@
     }
 
     // delay() — waits ms milliseconds — do not change this
-    function delay(ms) {
+    function delay(s) {
       return new Promise(function(resolve) {
-        setTimeout(resolve, ms);
+        setTimeout(resolve, s);
       });
     }
 
@@ -78,7 +81,7 @@
       }, 1000);
 
       // await — pause for 3 seconds
-      await delay(3000);
+      await delay(6000);
       document.getElementById("status").innerHTML = "Out for delivery!";
 
       // await — pause for 2 seconds

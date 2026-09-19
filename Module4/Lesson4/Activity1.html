@@ -9,14 +9,17 @@
     <p>You can use .property or ["property"].</p>
     <p id="demo"></p>
     <script>
-    // Create an object:
+   let animal=["dog","cat","elephant","fox","fish",1,0.56,5.7];
 
-    var arr=[1,2,3,4,8];
+   for(let i=0;i<=6;i++){
+    document.write(animal[i]);
 
-    var person = {
-    firstName: "I",
-    age: 20,
-    };
+   }
+   let student={
+    name:"abcd",
+    age:16
+   }
+   document.write(student.name);
 
     // Display some data from the object:
     document.getElementById("demo").innerHTML = person.firstName + " am " + person.age + " years old";
