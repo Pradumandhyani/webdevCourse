@@ -1,8 +1,9 @@
 # ---- School Class Organiser ----
 
 # STEP 1 - Create a list of classmates
-classmates = ["Aarav", "Priya", "Rahul", "Sneha", "Dev"]
+classmates = ["Aarav", "Priya", "Rahul", "Sneha", "Dev","hello"]
 print("Class list:", classmates)
+classmates[1]="hiii"
 
 # STEP 2 - Access the list
 print("Total students:", len(classmates))
@@ -21,7 +22,10 @@ classmates.reverse()
 print("Reversed:", classmates)
 
 # STEP 4 - Create a teacher dictionary
-teacher = {"name": "Mr. Sharma", "subject": "Python", "experience": 5}
+teacher = {
+    "name": "Mr. Sharma",
+    "subject": "Python",
+    "experience": 5}
 print("\nTeacher profile:", teacher)
 
 # STEP 5 - Dictionary operations
@@ -37,4 +41,4 @@ roll_numbers = [1, 2, 3, 4, 5]
 names = ["Aarav", "Priya", "Rahul", "Sneha", "Meera"]
 student_directory = dict(zip(roll_numbers, names))
 print("\nStudent Directory:", student_directory)
-print("Student at Roll 3:", student_directory[3])
+print("Student at Roll 3:", student_directory[5])
