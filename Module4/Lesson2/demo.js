@@ -1,6 +1,3 @@
-var fruits = ["Apple", "Mango", "Grapes", "Watermelon", "Jack Fruit", "Banana"];
-
-for(let i=0;i<fruits.length;i++){
-    console.log(fruits[i]);
+for(let a=1;a<=10;a++){
+    print(a*2);
 }
-

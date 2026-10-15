@@ -1,4 +1,3 @@
-# ---- Music Playlist Manager ----
 
 class Playlist:
 

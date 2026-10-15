@@ -22,6 +22,7 @@ else:
 
 
 # PART 4 - if-elif-else
+temp=15
 if temp > 35:
     print("Weather: Scorching Hot")
 elif temp > 25:
@@ -40,4 +41,4 @@ now = datetime.datetime.now()
 print("City:", city)
 print("Time now:", now)
 
-print(calendar.calendar(now.year))
+print(calendar.calendar(now.year-1))

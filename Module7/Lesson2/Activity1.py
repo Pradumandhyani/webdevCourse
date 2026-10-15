@@ -21,7 +21,7 @@ is_available = True       # bool  — True or False
 # print(type(is_available))
 
 
-# # PART 2 — ARITHMETIC OPERATORS
+# PART 2 — ARITHMETIC OPERATORS
 # total = price * quantity
 # print("Total value: $", total)
 # print("Sale price: $", price - 0.25)
@@ -30,15 +30,15 @@ is_available = True       # bool  — True or False
 
 # # PART 3 — COMPARISON OPERATORS
 # print("Is price under $2?", price < 2)
-# print("More than 5 in stock?", quantity > 5)
-# print("Is price exactly $1.50?", price == 1.50)
+# print("More than 5 in stock?", quantity < 5)
+# print("Is price exactly $1.50?", price == 1.52)
 
 
 # PART 4 — STRING OPERATIONS
-shop_name = "Quick" + " " + "Bites"
-print("Shop name:", shop_name)
-print("Letters in snack name:", len(snack_name))
-print("First letter:", snack_name[4])
+# shop_name = "Quick" + " " + "Bites"
+# print("Shop name:", shop_name)
+# print("Letters in snack name:", len(shop_name))
+# print("First letter:", shop_name[3])
 
 
 # PART 5 — SWAPPING VALUES
@@ -51,3 +51,4 @@ price_a = price_b
 price_b = temp
 
 print("After:", price_a, "and", price_b)
+

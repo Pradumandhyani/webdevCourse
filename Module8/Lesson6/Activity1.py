@@ -62,3 +62,8 @@ print(f"get_score() still shows: {cricket.get_score()}")
 print("\n--- Updating scores ---")
 cricket.set_score(100)
 football.set_score(3)
+
+
+# overloading-> when we have multiple methods with the same name but different parameters, 
+# it is called method overloading in the same class 
+# overridding-> when we have same name same parameters but different class.

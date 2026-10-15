@@ -14,6 +14,8 @@ def multiply(x, y):
 
 # This function divides two numbers
 def divide(x, y):
+    if y==0:
+        return "num2 cannot be 0"
     return x / y
 
 num1 = int(input("Enter Number 1"))

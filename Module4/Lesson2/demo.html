@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button onclick="example(8,7)"> login</button>
-    <p id="result"></p>
-    <script>
-        function example(a,b){
-            document.getElementById("result").innerHTML="login successfull "+(a*b);
-        }
+<html>
+    <head>
+        <title>function</title>
+    </head>
+    <body>
+        <h1>This is my function</h1>
+        <button onclick="showme()">click me</button>
+        <h1 id="res"></h1>
+        <script>
+            let a=5;b=23;
+            function real(){
+                
+            }
+            const showme=()=>{
+                document.getElementById("res").innerHTML="the sum of a and b is "+(a+b);
+            }
 
-    </script>
-</body>
+        </script>
+    </body>
 </html>
