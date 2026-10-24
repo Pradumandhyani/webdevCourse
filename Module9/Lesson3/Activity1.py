@@ -11,12 +11,12 @@ with open("science-notes.txt", "r") as f:
 print()
 
 # PART 2 -- Count Words in Each Line
-print("=== Word Count ===")
-with open("maths-notes.txt", "r") as f:
-    for line in f:
-        words = line.split()
-        print(len(words), "words ->", line.strip())
-print()
+# print("=== Word Count ===")
+# with open("maths-notes.txt", "r") as f:
+#     for line in f:
+#         words = line.split()
+#         print(len(words), "words ->", line.strip())
+# print()
 
 # PART 3 -- Check and Merge
 print("=== Merging Notes ===")

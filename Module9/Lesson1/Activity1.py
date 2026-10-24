@@ -5,22 +5,22 @@
 # ── PART 1: Write your bucket list to a file ─────────────────────────────────
 # 'w' mode creates the file if it does not exist.
 # If the file already exists, 'w' wipes the old content and starts fresh.
-# file = open("bucket-list.txt", "w")
-# file.write("1. Visit the Eiffel Tower\n")
-# file.write("2. Learn to play the guitar\n")
-# file.write("3. Code my own game\n")
-# file.close()                            # always close after writing
-# print("Bucket list saved to bucket-list.txt!")
+file = open("bucket-list.txt", "w")
+file.write("1. Visit the Eiffel Tower\n")
+file.write("2. Learn to play the guitar\n")
+file.write("3. Code my own game\n")
+file.close()                            # always close after writing
+print("Bucket list saved to bucket-list.txt!")
 
 
 # ── PART 2: Read the full file ────────────────────────────────────────────────
 # 'r' mode opens the file for reading only.
 # read() returns the entire content as one big string.
-# file = open("bucket-list.txt", "r")
-# content = file.read()
-# print("\n=== My Bucket List ===")
-# print(content)
-# file.close()
+file = open("bucket-list.txt", "r")
+content = file.read()
+print("\n=== My Bucket List ===")
+print(content)
+file.close()
 
 
 # # ── PART 3: Count the items ───────────────────────────────────────────────────

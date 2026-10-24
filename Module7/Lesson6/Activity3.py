@@ -17,3 +17,7 @@ while True:
     t.width(x/100 + 7)
     t.forward(x) 
     t.right(59) 
+# x=0
+# t.pencolor(color[0%6])=>t.pencolor(color[0])=>t.pencolor("red")
+# x=9
+# t.pencolor(color(9%6))=>t.pen

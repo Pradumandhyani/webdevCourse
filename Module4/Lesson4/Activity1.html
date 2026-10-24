@@ -1,28 +1,21 @@
-<!DOCTYPE html>
 <html>
+  <head><title>Arrays and objects</title></head>
   <body>
-
-    <h2>JavaScript Objects and its Properties</h2>
-
-    <p>There are two different ways to access an object property</p>
-
-    <p>You can use .property or ["property"].</p>
-    <p id="demo"></p>
     <script>
-   let animal=["dog","cat","elephant","fox","fish",1,0.56,5.7];
-
-   for(let i=0;i<=6;i++){
-    document.write(animal[i]);
-
-   }
-   let student={
-    name:"abcd",
-    age:16
-   }
-   document.write(student.name);
-
-    // Display some data from the object:
-    document.getElementById("demo").innerHTML = person.firstName + " am " + person.age + " years old";
+      var areef=["dog","cat","horse",21,45,56.4]
+      // document.write(areef.length)
+      for(var i=0;i<areef.length;i++){
+        document.write(areef[i])
+        document.write("<br>")
+      }
+      var obj={
+        name:"areef",
+        age:15,
+        address:"nigeria"
+      }
+      document.write(obj.name)
+      document.write("<br>")
+      document.write(obj.address)
     </script>
   </body>
 </html>
